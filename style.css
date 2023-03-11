@@ -1,27 +1,88 @@
 :root {
+  /* ### Primary */
 
-    /* ### Primary */
+  /* (active input border) */
+  --LinearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* (input errors) */
+  --Red: hsl(0, 100%, 66%);
 
-    /* (active input border) */
-    --LinearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-    /* (input errors) */
-    --Red: hsl(0, 100%, 66%);
-    
-    /* ### Neutral */
-    
-    --White: hsl(0, 0%, 100%);
-    --LightGrayishViolet: hsl(270, 3%, 87%);
-    --DarkGrayishViolet: hsl(279, 6%, 55%);
-    --VeryDarkViolet: hsl(278, 68%, 11%); 
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --LightGrayishViolet: hsl(270, 3%, 87%);
+  --DarkGrayishViolet: hsl(279, 6%, 55%);
+  --VeryDarkViolet: hsl(278, 68%, 11%);
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* border: 0; */
-    outline:none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 0; */
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Space Grotesk";
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+body {
+}
+#card-itself {
+  margin: 3rem auto;
+  width: 19rem;
+}
+header {
+  position: relative;
+  height: 12rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+}
+main {
+  padding: 0 1rem;
+  margin-top: 5rem;
+  background-color: hsl(270, 3%, 87%);
+}
+.first-input {
+  width: 100%;
+}
+
+input {
+    border-radius: 0.4rem;
+  width: 5rem;
+  padding: 0.65rem;
+}
+.flex {
+  display: flex;
+}
+#card1 {
+    border-radius: 0.3rem;
+  position: absolute;
+  width: 14.2rem;
+  height: 7.4rem;
+  background-color: red;
+  left: 1rem;
+  top: 6.6rem;
+  z-index: 1;
+}
+#card2 {
+    z-index: 0;
+    border-radius: 0.3rem;
+    position: absolute;
+    width: 14.2rem;
+    height: 7.4rem;
+    background-color: green;
+    left: 3.8rem;
+    top: 1.8rem;
+}
+.inputpad {
+  padding: 0.1rem;
+}
+input:last-child {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
