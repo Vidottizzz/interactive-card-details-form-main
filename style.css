@@ -24,17 +24,23 @@
   font-family: "Space Grotesk";
 }
 body {
+  background-color: rgb(248, 248, 248);
 }
 #card-itself {
-    background-color: hsl(270, 3%, 87%);
+  background-color: white;
   margin: 3rem auto;
   width: 19rem;
 }
 header {
+  border-top-right-radius: 0.7rem;
+  border-top-left-radius: 0.7rem;
   position: relative;
   height: 12rem;
   background-image: url(/interactive-card-details-form-main/images/bg-main-mobile.png);
   background-repeat: no-repeat;
+}
+::placeholder {
+color:var(--LightGrayishViolet)
 }
 main {
   padding: 0 1rem;
@@ -55,7 +61,7 @@ input {
   width: 4rem;
   margin-right: 0.8rem;
   border: 1px solid hsl(279, 6%, 55%); ;
-  
+  margin-top: 0.35rem;
 }
 .lastinput {
     width: 7.3rem;
@@ -83,6 +89,7 @@ input {
     background-repeat: no-repeat;
     background-size: contain;
     color:white;
+    box-shadow: 10px 30px 10px 0px rgba(0,0,0,0.06);
 }
 #card2 {
     z-index: 0;
@@ -122,8 +129,12 @@ background-color: white;
 border-radius: 50%;
 }
 .inputpad {
-  padding: 0.1rem;
+  padding: 0.65rem;
 }
+#fname {
+  margin-bottom: 0.7rem;
+}
+
 input:last-child {
   width: 100%;
   margin-bottom: 2rem;
