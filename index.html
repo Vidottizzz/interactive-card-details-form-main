@@ -21,70 +21,74 @@
   </head>
   <body>
     <div id="card-itself">
-
-      <header>
-        <div id="card1">
-          <div class="hold-cardtitle flex">
-            <div id="circle-card"></div>
-            <div id="input-show"></div>
-          </div>
-          <div id="card-num">0000 0000 0000 0000</div>
-          <div class="flex-between">
-            <div id="card-name">JANE APPLESEED</div>
-            <div id="card-date">00/00</div>
-          </div>
-            </div>
-        <div id="card2">
-          <p>000</p>
+<div id="card-itself-desktop">
+  <header>
+    <div id="background-desk"></div>
+      <div id="card1">
+        <div class="hold-cardtitle flex">
+          <div id="circle-card"></div>
+          <div id="input-show"></div>
         </div>
-        
-      </header>
-  
-      <main>
-        <form action="/action_page.php">
-          <label for="fname">CARDHOLDER NAME</label><br />
-          <input
-          class="first-input"
-            type="text"
-            id="fname"
-            name="fname"
-            value=""
-            placeholder="e.g. Jane Appleseed"
-          /><br />
-          <label for="lname">CARD NUMBER</label><br />
-          <input
-          class="first-input"
-            type="text"
-            id="lname"
-            name="lname"
-            value=""
-            placeholder="e.g. 1234 5678 9123 0000"
-          /><br /><br />
+        <div id="card-num">0000 0000 0000 0000</div>
+        <div class="flex-between">
+          <div id="card-name">JANE APPLESEED</div>
+          <div id="card-date">00/00</div>
+        </div>
+          </div>
+      <div id="card2">
+        <p>000</p>
+      </div>
+    
+  </header>
+
+  <main>
+    <form action="/action_page.php">
+      <label for="fname">CARDHOLDER NAME</label><br />
+      <input
+      class="first-input"
+        type="text"
+        id="fname"
+        name="fname"
+        value=""
+        placeholder="e.g. Jane Appleseed"
+      /><br />
+      <label for="lname">CARD NUMBER</label><br />
+      <input
+      class="first-input"
+        type="text"
+        id="lname"
+        name="lname"
+        value=""
+        placeholder="e.g. 1234 5678 9123 0000"
+      /><br /><br />
+    <div class="flex">
+      <div>
+        <label for="lname">EXP. DATE (MM/YY)</label><br />
         <div class="flex">
-          <div>
-            <label for="lname">EXP. DATE (MM/YY)</label><br />
-            <div class="flex">
-              <input type="text" class="inputpad" id="lname" name="lname" value="" placeholder="MM" /><br />
-              <input type="text" class="inputpad" id="lname" name="lname" value="" placeholder="YY" /><br /><br />
-            </div>
-          </div>
-              <div>
-                <label for="lname">CVC</label><br />
-                <input
-                class="lastinput"
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  value=""
-                  placeholder="e.g. 123"
-                /><br /><br />
-              </div>
-
+          <input type="text" class="inputpad" id="lname" name="lname" value="" placeholder="MM" /><br />
+          <input type="text" class="inputpad" id="lname" name="lname" value="" placeholder="YY" /><br /><br />
         </div>
-       
-          <input type="submit" value="Confirm" />
-        </form>
-      </main>
+      </div>
+          <div>
+            <label for="lname">CVC</label><br />
+            <input
+            class="lastinput"
+              type="text"
+              id="lname"
+              name="lname"
+              value=""
+              placeholder="e.g. 123"
+            /><br /><br />
+          </div>
+
+    </div>
+   
+      <input type="submit" value="Confirm" />
+    </form>
+  </main>
+
+
+</div>
 
     </div>
 

@@ -40,7 +40,7 @@ header {
   background-repeat: no-repeat;
 }
 ::placeholder {
-color:var(--LightGrayishViolet)
+  color: var(--LightGrayishViolet);
 }
 main {
   padding: 0 1rem;
@@ -50,21 +50,21 @@ main {
   width: 100%;
 }
 form label {
-    font-weight: bold;
-    font-size:0.6rem;
-    letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
 }
 input {
   border-radius: 0.4rem;
   width: 5rem;
-  padding: 0.70rem;
+  padding: 0.7rem;
   width: 4rem;
   margin-right: 0.8rem;
-  border: 1px solid hsl(279, 6%, 55%); ;
+  border: 1px solid hsl(279, 6%, 55%);
   margin-top: 0.35rem;
 }
 .lastinput {
-    width: 7.3rem;
+  width: 7.3rem;
 }
 
 .flex {
@@ -73,60 +73,60 @@ input {
 .flex-between {
   display: flex;
   justify-content: space-between;
-
 }
 #card1 {
-    font-size: 0.8rem;
-    padding: 1rem;
-    border-radius: 0.3rem;
-    position: absolute;
-    width: 14.5rem;
-    height: 8rem;
-    background-image: url(/interactive-card-details-form-main/images/bg-card-front.png);
-    left: 1rem;
-    top: 6.3rem;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color:white;
-    box-shadow: 10px 30px 10px 0px rgba(0,0,0,0.06);
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  width: 14.5rem;
+  height: 8rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-card-front.png);
+  left: 1rem;
+  top: 6.3rem;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  box-shadow: 10px 30px 10px 0px rgba(0, 0, 0, 0.06);
 }
 #card2 {
-    z-index: 0;
-    border-radius: 0.3rem;
-    position: absolute;
-    width: 16.2rem;
-    height: 8rem;
-    left: 3.4rem;
-    top: 1.8rem;
-    background-image: url(/interactive-card-details-form-main/images/bg-card-back.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+  z-index: 0;
+  border-radius: 0.3rem;
+  position: absolute;
+  width: 16.2rem;
+  height: 8rem;
+  left: 3.4rem;
+  top: 1.8rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #card2 p {
-    position: absolute;
-    left: 11.7rem;
-    top: 3.6rem;
-    font-size: 0.55rem;
-    color:white;
+  position: absolute;
+  left: 11.7rem;
+  top: 3.6rem;
+  font-size: 0.55rem;
+  color: white;
 }
 #card-num {
-    margin-bottom: 0.6rem;
-    font-size:1rem;
-    letter-spacing: 0.05rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
 }
-#card-name, #card-date {
-    font-size: 0.55rem;
-    letter-spacing: 0.1rem;
+#card-name,
+#card-date {
+  font-size: 0.55rem;
+  letter-spacing: 0.1rem;
 }
 .hold-cardtitle {
-    margin-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 #circle-card {
-width: 1.8rem;
-height: 1.8rem;
-background-color: white;
-border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 50%;
 }
 .inputpad {
   padding: 0.65rem;
@@ -147,4 +147,64 @@ input:last-child {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+
+  body {
+    position: relative;
+  }
+  header {
+
+  }
+
+  main {
+    position: absolute;
+    left: 85rem;
+    top: 18.5rem;
+  }
+  #card-itself-desktop {
+    display: flex;
+  }
+  #card-itself {
+    background-color: aquamarine;
+    width: 100%;
+    height: 72rem;
+    margin-top: 0;
+  }
+  #card1 {
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    width: 38.5rem;
+    height: 32rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-card-front.png);
+    left: 16rem;
+    top: 13.5rem;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+  }
+  #card2 {
+    z-index: 0;
+    border-radius: 0.3rem;
+    position: absolute;
+    width: 38.5rem;
+    height: 32rem;
+    left: 26.4rem;
+    top: 36.8rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #background-desk {
+    width: 55rem;
+    height: 72rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
