@@ -31,3 +31,15 @@ The designs were created to the following widths:
 
 - Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 - Weights: 500
+
+1- Fill in the form and see the card details update in real-time
+
+2- Receive error messages when the form is submitted if:
+ 
+-> Any input field is empty
+
+-> The card number, expiry date, or CVC fields are in the wrong format
+
+5- View the optimal layout depending on their device's screen size - done
+
+6- See hover, active, and focus states for interactive elements on the page - done
