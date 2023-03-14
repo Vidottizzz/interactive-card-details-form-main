@@ -40,9 +40,8 @@
       </div>
     
   </header>
-dname mname fname lname
   <main>
-    <form action="/action_page.php" name="Form" method="post" onsubmit="return validateForm()" action="">
+    <form action="/action_page.php" name="Form" method="post" onsubmit="required()" action="">
       <label for="fname">CARDHOLDER NAME</label><br />
       <input
       class="first-input"
@@ -51,7 +50,9 @@ dname mname fname lname
         name="fname"
         value=""
         placeholder="e.g. Jane Appleseed"
-      /><br />
+      />
+      <div class="err-msg"><p>Can't be blank</p></div>
+      <br />
       <label for="lname">CARD NUMBER</label><br />
       <input
       class="first-input"
@@ -60,13 +61,18 @@ dname mname fname lname
         name="lname"
         value=""
         placeholder="e.g. 1234 5678 9123 0000"
-      /><br /><br />
+      />
+      <div class="err-msg">
+        <p>Can't be blank</p></div>
+      <br />
     <div class="flex">
       <div>
         <label for="lname">EXP. DATE (MM/YY)</label><br />
         <div class="flex">
           <input type="text" class="inputpad" id="mname" name="lname" value="" placeholder="MM" /><br />
-          <input type="text" class="inputpad" id="mname" name="lname" value="" placeholder="YY" /><br /><br />
+          <input type="text" class="inputpad" id="mname" name="lname" value="" placeholder="YY" />
+          <div class="err-msg1"><p>Can't be blank</p></div>
+          <br /><br />
         </div>
       </div>
           <div>
@@ -78,12 +84,14 @@ dname mname fname lname
               name="dname"
               value=""
               placeholder="e.g. 123"
-            /><br /><br />
+            />
+            <div class="err-msg"><p>Can't be blank</p></div>
+            <br /><br />
           </div>
 
     </div>
    
-      <input type="submit" value="Confirm" />
+      <input type="submit" id="submit-answ" onClick="validacao()"value="Confirm" />
     </form>
   </main>
 

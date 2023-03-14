@@ -31,6 +31,21 @@ body {
   margin: 3rem auto;
   width: 19rem;
 }
+.err-msg1 {
+position: absolute;
+top: 20.5rem;
+left: 1.5rem;
+color: var(--Red);
+}
+.err-msg p{
+  color: var(--Red);
+  font-size: 1rem;
+  margin-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+.hide {
+  display: none;
+}
 header {
   border-top-right-radius: 0.7rem;
   border-top-left-radius: 0.7rem;
@@ -163,6 +178,9 @@ input:focus {
   
   border: solid 2px hsl(249, 99%, 64%);
 }
+input#fname.first-input {
+  margin-bottom: 0;
+}
 
 @media screen and (min-width: 1440px) {
   body {
@@ -173,9 +191,13 @@ input:focus {
     left: 78rem;
     top: 20rem;
   }
-  input {
+.first-input {
+  width: 25rem;
+  padding: 1rem;
+}
+input#dname.lastinput {
     padding: 1rem;
-    width: 10rem;
+  width: 13.5rem;
   }
   main form label {
     font-size: 0.8rem;
@@ -261,8 +283,10 @@ input:focus {
   }
   .inputpad {
     padding: 1rem;
+    width: 5rem;
   }
   input:last-child {
+    margin-top: 0.5rem;
     font-size: 1.2rem;
   }
 }

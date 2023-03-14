@@ -1,16 +1,41 @@
 // dname mname fname lname
 
-function validateForm() {
-    var a = document.forms["Form"]["dname"].value;
-    var b = document.forms["Form"]["mname"].value;
-    var c = document.forms["Form"]["fname"].value;
-    var d = document.forms["Form"]["lname"].value;
-    if ((a == null || a == "") && (b == null || b == "") && (c == null || c == "") && (d == null || d == "")) {
-      alert("Please Fill In All Required Fields");
-      return false;
+let wrgmsg = document.querySelectorAll(".err-msg");
+
+let btn = document.querySelector("#submit-answ");
+const errMsg = document.querySelector('.err-msg');
+
+
+btn.addEventListener("click", function(e) {
+    
+    e.preventDefault();
+    
+    function required()
+    {
+        let cvc = document.forms["Form"]["dname"].value;
+        let exp = document.forms["Form"]["mname"].value;
+        let name = document.forms["Form"]["fname"].value;
+        let num = document.forms["Form"]["lname"].value;
+
+        if (name === "" || name === null)
+        {
+            inputEmail.classList.add('border-red');
+            errMsg.classList.remove('hide');
+        }
+        else {
+            inputEmail.classList.remove('border-red');
+            errMsg.classList.add('hide');
+         }
     }
-    if ((a == null || a == "")) {
-      alert("Can't be blank");
-      return false;
-    }
-  }
+  });
+
+
+
+
+  
+  
+  
+  btn.addEventListener('click', validação);
+  
+  
+    
