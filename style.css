@@ -31,18 +31,31 @@ body {
   margin: 3rem auto;
   width: 19rem;
 }
-.err-msg1 {
-position: absolute;
-top: 20.5rem;
-left: 1.5rem;
-color: var(--Red);
-}
-.err-msg p{
+.err-msg {
   color: var(--Red);
   font-size: 1rem;
   margin-left: 0.4rem;
   margin-top: 0.2rem;
 }
+.err-msg1 {
+  padding-left: 0.6rem;
+  padding-top: 0.25rem;
+color: var(--Red);
+}
+div.err-msg2{
+  color: var(--Red);
+
+}
+.err-msg3 {
+padding-top: 0.1rem;
+padding-left: 0.3rem;
+color: var(--Red);
+}
+
+.border-red {
+  border: 2px solid var(--Red);
+}
+
 .hide {
   display: none;
 }
@@ -195,6 +208,13 @@ input#fname.first-input {
   width: 25rem;
   padding: 1rem;
 }
+#hold-exp {
+  margin-top: 0.5rem;
+  display: block;
+}
+#hold-cvc {
+  margin-top: 0.5rem;
+}
 input#dname.lastinput {
     padding: 1rem;
   width: 13.5rem;
@@ -289,4 +309,31 @@ input#dname.lastinput {
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
+  .err-msg {
+    color: var(--Red);
+    font-size: 1rem;
+    margin-left: 0.6rem;
+    margin-top: 0.2rem;
+  }
+  .err-msg1  {
+    padding-left: 0.6rem;
+    padding-top: 0.25rem;
+  color: var(--Red);
+}
+#exp {
+  position: relative;
+}
+div.err-msg2 {
+ 
+  position: absolute;
+  top: 5.5rem;
+  left: 0.6rem;
+
+  }
+  .err-msg3 {
+  padding-top: 0.1rem;
+  padding-left: 0.6rem;
+  color: var(--Red);
+  }
+  
 }
