@@ -19,21 +19,63 @@ let cardYearInput = document.querySelector("#expYear");
 let cardYearDiv = document.querySelector("#card-date1");
 let cardCVCDiv = document.querySelector("#card2p");
 let cardCVCInput = document.querySelector("#cvc-input");
+let regex = /(.{4})/g;
 
 function handleForm(event) {
   event.preventDefault();
 }
 form.addEventListener("submit", handleForm);
 
-function myFunction()
+cardNumInput.addEventListener("input", (e) => {
+ let newValue = cardNumInput.value.replace(regex, "$1 ");
+   cardNumDiv.innerHTML= newValue;
+});
+
+
+
+// fazer aparecer simultaneamente no cartao
+function cardNameFunc()
 {
-    cardNameDiv.innerHTML =  cardNameInput.value;
+    cardNameDiv.innerHTML =  cardNameInput.value; 
+}
+function cardNumFunc()
+{    
     cardNumDiv.innerHTML =  cardNumInput.value;
+}
+function cardMonthFunc()
+{
     cardMonthDiv.innerHTML =  cardMonthInput.value;
+}
+function cardYearFunc()
+{
     cardYearDiv.innerHTML =   `/${cardYearInput.value}`;
-    cardCVCDiv.innerHTML =   cardCVC  Input.value;
+    
+}
+function cardCVCFunc()
+{
+    cardCVCDiv.innerHTML =   cardCVCInput.value;
 }
 
+// cardNumInput.addEventListener('input', function (e) {
+//   e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+// });
+
+function checkLength(len,ele){
+  var fieldLength = ele.value.length;
+  if(fieldLength <= len){
+    return true;
+  }
+  else
+  {
+    var str = ele.value;
+    str = str.substring(0, str.length - 1);
+    ele.value = str;
+  }
+}         
+
+
+
+// validar os campos vazios
 function validate() {
   let name = document.forms["Form"]["cardname"].value;
   let num = document.forms["Form"]["cardnum"].value;
@@ -44,8 +86,10 @@ function validate() {
     
     var letters = /^[A-Za-z0-9\s]+$/;
     var result = letters.test(num);
-  
-    if (name == "") {
+
+
+ 
+  if (name == "") {
       errMsg.classList.remove("hide");
       document.forms["Form"]["cardname"].classList.add("border-red");
     } else {

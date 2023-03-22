@@ -47,25 +47,27 @@
           <form name="Form" id="form">
             <label for="fname">CARDHOLDER NAME</label><br />
             <input
-              onkeypress="myFunction()"
+              onkeypress="cardNameFunc()"
               class="first-input"
               type="text"
               id="cardname"
               name="cardname"
               value=""
               placeholder="e.g. Jane Appleseed"
+              maxlength="35"
             />
             <div class="err-msg hide"><p>Can't be blank</p></div>
             <br />
             <label for="lname">CARD NUMBER</label><br />
             <input
-            onkeypress="myFunction()"
+            onkeypress="CardNumFunc()"
               class="first-input"
               type="number"
               id="cardnum"
               name="cardnum"
               value=""
               placeholder="e.g. 1234 5678 9123 0000"
+              onInput="checkLength(16,this)"
             />
             <div class="err-msg1 hide">
               <p>Can't be blank, and numbers only</p>
@@ -77,22 +79,24 @@
                 <label for="lname">EXP. DATE (MM/YY)</label><br />
                 <div class="flex">
                   <input
-                  onkeypress="myFunction()"
+                  onkeypress="cardMonthFunc()"
                     type="number"
                     class="inputpad"
                     id="expMonth"
                     name="expdate"
                     value=""
                     placeholder="MM"
+                    onInput="checkLength(2,this)"
                   /><br />
                   <input
-                  onkeypress="myFunction()"
+                  onkeypress="cardYearFunc()"
                     type="number"
                     class="inputpad"
                     id="expYear"
                     name="expdate1"
                     value=""
                     placeholder="YY"
+                    onInput="checkLength(2,this)"
                   />
                   <div class="err-msg2 hide">
                     <p>Can't be blank</p>
@@ -102,13 +106,14 @@
               <div id="hold-cvc">
                 <label for="lname">CVC</label><br />
                 <input
-                onkeypress="myFunction()"
+                onkeypress="cardCVCFunc()"
                   class="lastinput"
                   type="number"
                   id="cvc-input"
                   name="cvc"
                   value=""
                   placeholder="e.g. 123"
+                  onInput="checkLength(3,this)"
                 />
                 <div class="err-msg3 hide"><p>Can't be blank</p></div>
                 <br /><br />
