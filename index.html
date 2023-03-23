@@ -30,11 +30,10 @@
           <div id="card1">
             <div class="hold-cardtitle flex">
               <div id="circle-card"></div>
-              <div id="input-show"></div>
             </div>
             <div id="card-num">0000 0000 0000 0000</div>
             <div class="flex-between">
-              <div id="card-name">Jane appleseed</div>
+              <div id="card-name">JANE APPLESEED</div>
               <div id="card-date">00</div>
               <div id="card-date1">/00</div>
             </div>
@@ -44,7 +43,7 @@
           </div>
         </header>
         <main>
-          <form name="Form" id="form">
+          <form name="Form" id="form" class="">
             <label for="fname">CARDHOLDER NAME</label><br />
             <input
               onkeypress="cardNameFunc()"
@@ -126,13 +125,21 @@
               id="submit-answ"
               onClick="validacao()"
               value="Confirm"
-            />
-          </form>
+              />
+            </form>
+            <div id="completed-state" class="hide">
+              <div id="circle-correct"><img src="/interactive-card-details-form-main/images/icon-complete.svg" alt=""></div>
+              <p>THANK YOU!</p>
+              <p>We've added your card details</p>
+              <button id="btn-completed">Continue</button>
+            </div>
         </main>
       </div>
     </div>
+    
+    <footer>
 
-    <footer></footer>
+    </footer>
 
     <!-- Completed state start -->
 

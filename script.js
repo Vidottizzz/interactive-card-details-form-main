@@ -1,11 +1,9 @@
 // dname mname fname lname
 
-let wrgmsg = document.querySelectorAll(".err-msg");
 let input = document.querySelectorAll(".first-input");
 let btn = document.querySelector("#submit-answ");
 let errMsg = document.querySelector(".err-msg");
 let errMsg1 = document.querySelector(".err-msg1");
-let errMsg11 = document.querySelector(".err-msg11");
 let errMsg2 = document.querySelector(".err-msg2");
 let errMsg3 = document.querySelector(".err-msg3");
 let form = document.querySelector("#form");
@@ -19,6 +17,8 @@ let cardYearInput = document.querySelector("#expYear");
 let cardYearDiv = document.querySelector("#card-date1");
 let cardCVCDiv = document.querySelector("#card2p");
 let cardCVCInput = document.querySelector("#cvc-input");
+let thankDiv = document.querySelector("#completed-state");
+
 let regex = /(.{4})/g;
 
 function handleForm(event) {
@@ -36,7 +36,7 @@ cardNumInput.addEventListener("input", (e) => {
 // fazer aparecer simultaneamente no cartao
 function cardNameFunc()
 {
-    cardNameDiv.innerHTML =  cardNameInput.value; 
+    cardNameDiv.innerHTML =  cardNameInput.value.toUpperCase(); 
 }
 function cardNumFunc()
 {    
@@ -133,5 +133,15 @@ function validate() {
     document.forms["Form"]["expdate"].classList.remove("border-red");
     document.forms["Form"]["expdate1"].classList.remove("border-red");
   }
-}
 
+  if(errMsg.classList.contains("hide") && errMsg1.classList.contains("hide")&& errMsg2.classList.contains("hide") && errMsg3.classList.contains("hide")) {
+    form.classList.add("hide");
+    thankDiv.classList.remove("hide");
+    
+  }
+}
+// let wrgmsg = document.querySelectorAll(".err-msg");
+// let errMsg = document.querySelector(".err-msg");
+// let errMsg1 = document.querySelector(".err-msg1");
+// let errMsg2 = document.querySelector(".err-msg2");
+// let errMsg3 = document.querySelector(".err-msg3");
