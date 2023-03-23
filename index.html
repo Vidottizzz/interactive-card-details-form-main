@@ -43,7 +43,7 @@
         </header>
         <main>
           <form name="Form" id="form" class="">
-            <label for="fname">CARDHOLDER NAME</label><br />
+            <label for="cardname">CARDHOLDER NAME</label><br />
             <input
               onkeypress="cardNameFunc()"
               class="first-input"
@@ -56,7 +56,7 @@
             />
             <div class="err-msg hide"><p>Can't be blank</p></div>
             <br />
-            <label for="lname">CARD NUMBER</label><br />
+            <label for="cardnum">CARD NUMBER</label><br />
             <input
             onkeypress="CardNumFunc()"
               class="first-input"
@@ -74,7 +74,7 @@
             <br />
             <div id="exp" class="flex">
               <div id="hold-exp">
-                <label for="lname">EXP. DATE (MM/YY)</label><br />
+                <label for="expMonth">EXP. DATE (MM/YY)</label><br />
                 <div class="flex">
                   <input
                   onkeypress="cardMonthFunc()"
@@ -102,7 +102,7 @@
                 </div>
               </div>
               <div id="hold-cvc">
-                <label for="lname">CVC</label><br />
+                <label for="cvc-input">CVC</label><br />
                 <input
                 onkeypress="cardCVCFunc()"
                   class="lastinput"
