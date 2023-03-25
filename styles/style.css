@@ -1,0 +1,441 @@
+:root {
+  /* ### Primary */
+
+  /* (active input border) */
+  --LinearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* (input errors) */
+  --Red: hsl(0, 100%, 66%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --LightGrayishViolet: hsl(270, 3%, 87%);
+  --DarkGrayishViolet: hsl(279, 6%, 55%);
+  --VeryDarkViolet: hsl(278, 68%, 11%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 0; */
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Space Grotesk";
+}
+body {
+  background-color: rgb(248, 248, 248);
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+-moz-appearance: textfield;
+}
+#card-itself {
+  background-color: white;
+  margin: 3rem auto;
+  width: 19rem;
+  position: relative;
+}
+
+.err-msg {
+  color: var(--Red);
+  font-size: 0.9rem;
+  margin-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+.err-msg1 {
+  font-size: 0.9rem;
+  padding-left: 0.4rem;
+  padding-top: 0.25rem;
+color: var(--Red);
+}
+div.err-msg2{
+  color: var(--Red);
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 7.6rem;
+  left: 1.25rem;
+
+}
+.err-msg3 {
+  font-size: 0.9rem;
+padding-top: 0.1rem;
+padding-left: 0.3rem;
+color: var(--Red);
+}
+
+
+.border-red {
+  border: 2px solid var(--Red);
+}
+
+.hide {
+  display: none;
+}
+header {
+  border-top-right-radius: 0.7rem;
+  border-top-left-radius: 0.7rem;
+  position: relative;
+  height: 12rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+}
+::placeholder {
+  color: var(--LightGrayishViolet);
+}
+main {
+  padding: 0 1rem;
+  margin-top: 5rem;
+}
+.first-input {
+  width: 100%;
+}
+form label {
+  font-weight: bold;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+}
+input {
+  border-radius: 0.4rem;
+  width: 5rem;
+  padding: 0.7rem;
+  width: 4rem;
+  margin-right: 0.8rem;
+  border: 1px solid hsl(279, 6%, 55%);
+  margin-top: 0.35rem;
+}
+.lastinput {
+  width: 7.3rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+#card1 {
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  width: 14.5rem;
+  height: 8rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-card-front.png);
+  left: 1rem;
+  top: 6.3rem;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  box-shadow: 10px 30px 10px 0px rgba(0, 0, 0, 0.06);
+}
+#card2 {
+  z-index: 0;
+  border-radius: 0.3rem;
+  position: absolute;
+  width: 16.2rem;
+  height: 8rem;
+  left: 3.4rem;
+  top: 1.8rem;
+  background-image: url(/interactive-card-details-form-main/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#card2 p {
+  position: absolute;
+  left: 11.7rem;
+  top: 3.6rem;
+  font-size: 0.55rem;
+  color: white;
+}
+
+#card-num {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+#card-name,
+#card-date {
+  font-size: 0.55rem;
+  letter-spacing: 0.1rem;
+}
+#card-date1 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.hold-cardtitle {
+  margin-bottom: 1.6rem;
+}
+#circle-card {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.inputpad {
+  padding: 0.65rem;
+}
+#fname {
+  margin-bottom: 0.7rem;
+}
+input:last-child:hover {
+  cursor: pointer;
+  background-color: hsl(274, 5%, 30%);
+}
+
+input:last-child {
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: var(--VeryDarkViolet);
+  color: white;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+input:hover {
+
+  border: solid 2px hsl(249, 99%, 64%);
+  cursor: pointer;
+}
+input:active {
+}
+input:focus {
+  
+  border: solid 2px hsl(249, 99%, 64%);
+}
+input#fname.first-input {
+  margin-bottom: 0;
+}
+#card-date{
+  position: absolute;
+  right: 2.3rem;
+  bottom: 0.85rem;
+}
+#card-date1 {
+  font-size: 0.61rem;
+  letter-spacing: 0.1rem;
+}
+#completed-state {
+  text-align: center;
+}
+
+#completed-state p:first-of-type {
+  padding-bottom: 1rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+}
+#circle-correct {
+  margin-bottom: 1rem;
+}
+#completed-state p:nth-of-type(2) {
+  padding-bottom: 3rem;
+}
+#btn-completed {
+  padding: 0.9rem;
+  width: 100%;
+  border-radius: 0.6rem;
+  background-color: var(--VeryDarkViolet);
+  color: white;
+  border: 0;
+}
+#btn-completed:hover {
+cursor: pointer;
+background-color: hsl(274, 5%, 30%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    position: relative;
+  }
+  main {
+    position: absolute;
+    left: 68rem;
+    top: 20rem;
+  }
+.first-input {
+  width: 25rem;
+  padding: 1rem;
+}
+#hold-exp {
+  margin-top: 0.5rem;
+  display: block;
+}
+#hold-cvc {
+  margin-top: 0.5rem;
+}
+div.hold-cardtitle {
+  margin-bottom: 5rem;
+}
+input#cvc-input.lastinput {
+    padding: 1rem;
+  width: 13.5rem;
+  }
+  main form label {
+    font-size: 0.8rem;
+  }
+  ::placeholder {
+    font-size: 1.2rem;
+  }
+  #card-itself-desktop {
+    display: flex;
+  }
+  #card-itself {
+    width: 100%;
+    height: 72rem;
+    margin-top: 0;
+  }
+  #card1 {
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    width: 32rem;
+    height: 30rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-card-front.png);
+    left: 16rem;
+    top: 11.5rem;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+  }
+  #card2 {
+    z-index: 0;
+    border-radius: 0.3rem;
+    position: absolute;
+    width: 32rem;
+    height: 30rem;
+    left: 26.4rem;
+    top: 31.8rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #card2 p {
+    font-size: 1rem;
+    position: absolute;
+    left: 26rem;
+    top: 8rem;
+  }
+  #card-num {
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.45rem;
+    padding-left: 1.5rem;
+    
+  }
+  #card-name,
+  #card-date {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    padding-left: 1rem;
+  }
+  #card-date {
+    padding-right: 1rem;
+  }
+
+  .hold-cardtitle {
+    margin-bottom: 6.5rem;
+  }
+  #circle-card {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+  #background-desk {
+    width: 55rem;
+    height: 72rem;
+    background-image: url(/interactive-card-details-form-main/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #submit-answ {
+    width: 25.1rem;
+  }
+  .inputpad {
+    padding: 1rem;
+    width: 5rem;
+  }
+  input:last-child {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .err-msg {
+    color: var(--Red);
+    font-size: 1rem;
+    margin-left: 0.6rem;
+    margin-top: 0.2rem;
+  }
+  .err-msg1  {
+    padding-left: 0.6rem;
+    padding-top: 0.25rem;
+
+  color: var(--Red);
+}
+#exp {
+  position: relative;
+}
+div.err-msg2 {
+ 
+  position: absolute;
+  top: 5.5rem;
+  left: 0.6rem;
+
+  }
+  .err-msg3 {
+  padding-top: 0.1rem;
+  padding-left: 0.6rem;
+  color: var(--Red);
+  }
+  #card-date{
+    top: 14.6rem;
+   position: absolute;
+   font-size: 0.9rem;
+   right: 1.75rem;
+  }
+  #card-date1 {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+  #completed-state {
+    text-align: center;
+  }
+  
+  #completed-state p:first-of-type {
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+  }
+  #circle-correct {
+    margin-bottom: 1rem;
+  }
+  #completed-state p:nth-of-type(2) {
+    padding-bottom: 3rem;
+  }
+  #btn-completed {
+    padding: 0.9rem;
+    width: 21rem;
+    border-radius: 0.6rem;
+    background-color: var(--VeryDarkViolet);
+    color: white;
+    border: 0;
+  }
+  #btn-completed:hover {
+  cursor: pointer;
+  background-color: hsl(274, 5%, 30%);
+  }
+}
