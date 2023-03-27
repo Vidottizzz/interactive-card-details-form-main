@@ -26,6 +26,7 @@ function handleForm(event) {
 }
 form.addEventListener("submit", handleForm);
 
+// cada 4 inputs colocar o Regex estabelecido previamente
 cardNumInput.addEventListener("input", (e) => {
  let newValue = cardNumInput.value.replace(regex, "$1 ");
    cardNumDiv.innerHTML= newValue;
@@ -33,7 +34,7 @@ cardNumInput.addEventListener("input", (e) => {
 
 
 
-// fazer aparecer simultaneamente no cartao
+// fazer aparecer simultaneamente no cartao os valores do input nos valores das divs
 function cardNameFunc()
 {
     cardNameDiv.innerHTML =  cardNameInput.value.toUpperCase(); 
@@ -56,10 +57,7 @@ function cardCVCFunc()
     cardCVCDiv.innerHTML =   cardCVCInput.value;
 }
 
-// cardNumInput.addEventListener('input', function (e) {
-//   e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
-// });
-
+// limitar o numero de caracteres , e em casa input colocar o atrbuto onInput="checkLength(x,this)" sendo x a quantidade de caracteres que deseja limitar
 function checkLength(len,ele){
   var fieldLength = ele.value.length;
   if(fieldLength <= len){
@@ -87,8 +85,7 @@ function validate() {
     var letters = /^[A-Za-z0-9\s]+$/;
     var result = letters.test(num);
 
-
- 
+// se nome for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
   if (name == "") {
       errMsg.classList.remove("hide");
       document.forms["Form"]["cardname"].classList.add("border-red");
@@ -99,6 +96,8 @@ function validate() {
     
     // deixar o distanciamento do err msg para card number
 
+// se num for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
+
   if (num == "") {
     errMsg1.classList.remove("hide");
 
@@ -108,6 +107,7 @@ function validate() {
 
     document.forms["Form"]["cardnum"].classList.remove("border-red");
   }
+// se cvc for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
 
   if (cvc == "") {
     errMsg3.classList.remove("hide");
@@ -117,6 +117,7 @@ function validate() {
     document.forms["Form"]["cvc"].classList.remove("border-red");
   }
 
+  // aqui é uma condição criada para que se nem o mes nem o dia estivessem preenchido não desaparecia a mensagem de erro.
   if (
     exp == "" ||
     (exp == null && exp1 == "") ||
@@ -133,7 +134,7 @@ function validate() {
     document.forms["Form"]["expdate"].classList.remove("border-red");
     document.forms["Form"]["expdate1"].classList.remove("border-red");
   }
-
+// aqui é oque permite quando tudo estiver dentro das validações , no caso se todas as informações de erros estiverem com a propriedade hide a nova tela com mensagem de cadastrado com sucesso aparecedia ( tiraria a proprierade hide) e a tela principal sumiria adicionando a propriedade hide
   if(errMsg.classList.contains("hide") && errMsg1.classList.contains("hide")&& errMsg2.classList.contains("hide") && errMsg3.classList.contains("hide")) {
     form.classList.add("hide");
     thankDiv.classList.remove("hide");
